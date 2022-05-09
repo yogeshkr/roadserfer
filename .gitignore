@@ -42,5 +42,6 @@ yarn-error.log
 ###< phpunit/phpunit ###
 
 ###> lexik/jwt-authentication-bundle ###
+/api/config/jwt/*.pem
 /config/jwt/*.pem
 ###< lexik/jwt-authentication-bundle ###
