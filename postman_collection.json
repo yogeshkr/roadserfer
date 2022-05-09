@@ -42,9 +42,6 @@
 				},
 				{
 					"name": "getStationEquipmentStock",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -63,30 +60,30 @@
 								"value": "application/json"
 							}
 						],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "id",
-									"value": "5",
-									"type": "text"
-								}
-							]
-						},
 						"url": {
-							"raw": "{{baseUrl}}/api/items/:id",
+							"raw": "{{baseUrl}}/api/stock/:stationId?from=2022-05-10&to=2022-05-20",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
 								"api",
-								"items",
-								":id"
+								"stock",
+								":stationId"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "2022-05-10"
+								},
+								{
+									"key": "to",
+									"value": "2022-05-20"
+								}
 							],
 							"variable": [
 								{
-									"key": "id",
-									"value": ""
+									"key": "stationId",
+									"value": "3"
 								}
 							]
 						},
@@ -205,7 +202,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"item\": \"<iri-reference>\",\n  \"propertyName\": \"<string>\",\n  \"propertyCode\": \"<string>\",\n  \"propertyDescription\": \"<string>\"\n}",
+							"raw": "{\n\t\"pickupStation\": 3,\n\t\"dropStation\": 4,\n\t\"bookedFrom\": \"2022-05-15\",\n\t\"bookedTo\": \"2022-05-20\",\n\t\"totalAmount\": \"60.00\",\n\t\"equipments\": [{\n\t\t\"Id\": 1,\n\t\t\"Price\": \"10.00\",\n\t\t\"Quantity\": 1\n\t}, {\n\t\t\"Id\": 2,\n\t\t\"Price\": \"10.00\",\n\t\t\"Quantity\": 1\n\t}, {\n\t\t\"Id\": 3,\n\t\t\"Price\": \"10.00\",\n\t\t\"Quantity\": 1\n\t}, {\n\t\t\"Id\": 4,\n\t\t\"Price\": \"10.00\",\n\t\t\"Quantity\": 1\n\t}, {\n\t\t\"Id\": 5,\n\t\t\"Price\": \"10.00\",\n\t\t\"Quantity\": 1\n\t}, {\n\t\t\"Id\": 6,\n\t\t\"Price\": \"10.00\",\n\t\t\"Quantity\": 1\n\t}]\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -213,13 +210,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseUrl}}/api/properties",
+							"raw": "{{baseUrl}}/api/order",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
 								"api",
-								"properties"
+								"order"
 							]
 						},
 						"description": "Creates a Properties resource."
