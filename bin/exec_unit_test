@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# this command executes the unit test which are written under test folder
+# and generate the test report under public/unit-test-report folder
+#php bin/phpunit --coverage-html public/unit-test-report
+
+php -dxdebug.mode=coverage ./vendor/bin/phpunit --coverage-html public/unit-test-report

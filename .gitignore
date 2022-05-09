@@ -1,0 +1,46 @@
+# Use global .gitignore file to handle IDE related files,
+# only include application related files in the ignore list
+
+###> ignore node modules ###
+/node_modules/
+
+###> symfony/framework-bundle ###
+/.env.local
+/.env.local.php
+/.env.*.local
+/public/bundles/
+/var/
+/vendor/
+/config/parameters/*.yaml
+###< symfony/framework-bundle ###
+
+
+###> symfony/phpunit-bridge ###
+.phpunit
+###< symfony/phpunit-bridge ###
+
+###> friendsofphp/php-cs-fixer ###
+/.php_cs
+/.php_cs.cache
+.php_cs.dist
+###< friendsofphp/php-cs-fixer ###
+
+/.idea
+
+###> symfony/webpack-encore-bundle ###
+# /public/build/
+npm-debug.log
+yarn-error.log
+###< symfony/webpack-encore-bundle ###
+
+###> ignore unit test reports ###
+/public/unit-test-report
+
+###> phpunit/phpunit ###
+/phpunit.xml
+.phpunit.result.cache
+###< phpunit/phpunit ###
+
+###> lexik/jwt-authentication-bundle ###
+/config/jwt/*.pem
+###< lexik/jwt-authentication-bundle ###
