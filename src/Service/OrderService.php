@@ -54,7 +54,7 @@ class OrderService
             throw new \Exception('Selected drop station is invalid.');
         }
 
-        if(!is_countable($equipments) && count($equipments) <= 0){
+        if(count($equipments) <= 0){
             throw new \Exception('Equipments should be selected.');
         }
 
