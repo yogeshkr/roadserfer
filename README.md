@@ -3,7 +3,7 @@ Rest Api's Project
 
 ### Installation Step's :-
 
-Used MySql 5.7, PHP >= 7.3 and framework Symfony v5.4 with
+Used MySql 5.7, PHP >= 7.2 and framework Symfony v5.4 with
 
 - Clone Project from https://github.com/yogeshkr/roadserfer.git
 - Change directory to project directory `cd roadserfer`
@@ -25,6 +25,8 @@ Used MySql 5.7, PHP >= 7.3 and framework Symfony v5.4 with
   - username : dummy
   - password : dummy
 - Get the token and Add/Update variable `API_KEY` into postman
+- RUN `bin/exec_unit_test` command to execute unit test cases.
+- `{baseUrl}/unit-test-report/` To load the unit test report with code coverage.
 
 
 Thanks!
